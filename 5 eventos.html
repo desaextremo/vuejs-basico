@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Curso Vue.js - Eventos</title>
+</head>
+
+<body>
+    <div id="app">
+        <div>
+            <p>La directiva <b>v-on</b> se utiliza para ejecutar eventos.</p>
+            <p>En la forma resumida podemos utilizar el caracter <b></b>@:nombre del evento </p>
+            <button v-on:click="sumar">Sumar 1</button>
+            <button v-on:click="restar">Restar 1</button>
+            El contador esta en {{contador}}
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script type="text/javascript">
+        let app = new Vue({
+            el: "#app",
+            data: {
+                contador: 0
+            },
+            methods: {
+                sumar: function(){
+                    this.contador++   
+                },
+                restar : function(){
+                    this.contador--
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
